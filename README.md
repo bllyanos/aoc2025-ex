@@ -1,21 +1,17 @@
-# Advent
+# Advent of Code 2025 solutions by @bllyanos
 
-**TODO: Add description**
+## Code and Data
+for the solutions look at the `lib/mix/tasks/<day>.ex`
 
-## Installation
+the data inputs are stored in `data/<day>/input.txt`
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `advent` to your list of dependencies in `mix.exs`:
+## How to run
 
-```elixir
-def deps do
-  [
-    {:advent, "~> 0.1.0"}
-  ]
-end
+to test the script, use `mix <day> ./path/to/input.txt`
+
+for example:
+
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/advent>.
+mix one ./data/one/input.txt
+```
 
