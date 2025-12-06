@@ -29,4 +29,19 @@ defmodule Common.Reader do
     Logger.error("cannot read file #{path}", reason: reason)
     exit({:shutdown, 1})
   end
+
+  def read_grid(path) do
+    with {:ok, content} <- File.read(path) do
+      lines = String.split(content, "\n", trim: true)
+      [line | _] = lines
+      dimension = {Enum.count(lines), String.length(line)}
+      char_array = Enum.map(lines, &split_line_into_array/1)
+      {dimension, :array.from_list(char_array)}
+    end
+  end
+
+  def split_line_into_array(line) do
+    chars = String.split(line, "", trim: true)
+    :array.from_list(chars)
+  end
 end

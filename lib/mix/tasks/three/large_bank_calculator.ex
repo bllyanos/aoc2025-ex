@@ -15,12 +15,12 @@ defmodule Mix.Tasks.Three.LargeBankCalculator do
     |> Enum.reverse()
   end
 
-  def next_indices(current, max) do
+  def next_indices(current, _max) do
     current_rev = Enum.reverse(current)
-    current_arr = :array.from_list(current_rev)
+    _current_arr = :array.from_list(current_rev)
   end
 
-  def move_once(arr, max, index \\ 0, prev_stays \\ false) do
+  def move_once(arr, max, index \\ 0, _prev_stays \\ false) do
     array_size = :array.size(arr)
 
     if index >= array_size do
